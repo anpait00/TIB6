@@ -1,0 +1,103 @@
+%---------------------------------------------------------------------------------------------------------------------------
+% Kopf des Vortrags
+%---------------------------------------------------------------------------------------------------------------------------
+
+\part{Induktive Sensoren}
+\begin{center}
+Ulf Schmelzer (ulscit01@hs-esslingen.de) \\
+Antonio Parrotta (anpait00@hs-esslingen.de)\\[1cm]
+26. Oktober 2015 \\[1cm]
+\end{center}
+
+
+%---------------------------------------------------------------------------------------------------------------------------
+% Textteil
+%---------------------------------------------------------------------------------------------------------------------------
+\section*{Einführung}
+%\label{Kap_Einführung}
+
+Induktive Sensoren werden in der Industrie eingesetzt, um ferromagnetische Materialien zu detektieren. Dieser Bericht befasst sich mit dessen Entstehung, Funktionsweise, dem Einsatzgebiet und dessen Eigenschaften.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Geschichte}
+\label{geschichte}
+
+Die Firma BASF beauftragte im Jahre 1958 das Unternehmen »Pepperl und Fuchs« in Mannheim, eine Alternative zu den bisher eingesetzten mechanischen Schaltern in der Automatisierung zu entwickeln. Die Vorgabe war, dass die Neuentwicklung mehrere tausende Schaltvorgänge im chemischen Umfeld überstehen muss, im Gegensatz zu den mechanischen Schaltern, die durch die Gase und Mittel schnell verschlissen.
+
+Zu Beginn der Entwicklung wurden Bipolar-Transistoren verwendet, welche eine einfache Auswertung von Schwingkreisen und Umwandlung in Schaltsignale ermöglicht haben. Durch den schnellen Wachstum im Maschinenbau konnte parallel auch der induktive Sensor weiterentwickelt werden. Im Jahre 1968 entstand eine induktive Ausführung des Rollenhebel-Endschalters nach DIN 43 694. Dieser hatte fünf verschiedene Seiten für die Sensorfläche, damit alle möglichen Anfahrrichtungen des mechanischen Pendant nachempfunden werden konnten.\cite{geschichte}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Funktionsweise}
+\label{funktionsweise}
+
+Mit Hilfe einer LC-Schaltung wird ein elektromagnetischen Wechselfeldes erzeugt, siehe Abbildung \ref{fig:magnetfeld}. Durch den Ferritkern wird verhindert, dass sich das Feld in alle Richtungen ausbreiten kann. Somit kann die Detektionsrichtung des Sensors angepasst werden. Das Einbringen eines ferromagnetischen Gegenstands in das erzeugte Feld ändert den Amplitudengang der LC-Schaltung. Durch das Auswerten des Amplitudengangs durch einen Komparator kann festgestellt werden, ob sich ein Objekt innerhalb des Feldes befindet.
+\newpage
+\begin{figure}[h]
+	\centering\includegraphics[width=.4\textwidth]{induktiv_sensoren/magnetfeld_sensor.png}
+	\caption{Magnetfeld eines induktiven Sensors\cite{ifm}}
+	\label{fig:magnetfeld}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------------------------------------------------------------------------------------------------------------------
+\section*{Beta-Version}
+\label{Kap_Beta-Version}
+
+Nach der Alpha-Version kommt in der nächsten Phase die Beta-Version. Diese Version enthält den wesentlichen Funktionsumfang der Software. Die Beta-Version wird für mehr Personen zugänglich sein wie die Alpha-Version. Meist wird die Beta-Version für die potentiellen Kunden zur Verfügung gestellt. Diese testen die Software auf Herz und Nieren um die daraus resultierenden Bugs erneut zu beheben. Ein Beispiel für einen Bug wäre ein Konflikt mit einem anderen Programm. Dazu gibt es oft Foren in denen die User diese so genannten Bugs festhalten und der Entwickler sich darum kümmern kann. \cite{Ref_SWT08} \cite{Ref_wikipedia14}
+
+Diese Phase durchläuft meist nur wenige Testwiederholungen, da das Programm zu diesem Zeitpunkt vollständig umgesetzt sein sollte. (Ausnahme sind Bugs) Manche Unternehmen umschreiben diese Phase auch als ``erlebtbar'', denn zu diesem Zeitpunkt kann der Kunde zum ersten Mal sehen wie das Endprodukt aussehen wird. Dies Beta- Testphase läuft meist nur wenige Wochen. Sollte das Programme über Serveranbindungen verfügen, werde zu diesem Zeitpunkt sogenannte ``Stresstests'' durchgeführt, also ein Austesten der Serverleistungsgrenze und deren Folgen. \cite{Ref_centercode11}
+
+``Erkennbar sind Beta-Versionen unter anderem an der ``0'' in der Software-Versionsnummer oder am Namenszusatz Beta, ?
+
+z.B: v0.4 , v0.5? , Beta 0.5'' \cite{Ref_SWT08}
+
+Im Zusammenhang mit der Beta-Version gibt es noch zwei Testszenarien. Diese zwei Testszenarien lauten Closed Beta Test und Open Beta Test. Gerade in der Spiele-Entwicklung gewinnen diese extra Phasen an Beliebtheit. So können die Entwickler nicht nur mehrere Endtester gewinnen, sondern bekommen so schon eine erste Anzahl von interessierten Käufern. Diese Tester können auf eigens eingerichtete Foren ihre Bugs posten und so den Entwicklungsprozess vorantreiben. Viele Entwickler verlangen schon für die Closed Beta Geld und bieten dafür das Spiel für diese BetaTester billiger an. Dies kann als ``Win-Win-Situation'' gesehen werden, da interessierte Spieler, das Spiel billiger erhalten und die Entwickler schon erste Einnahmen verzeichnen können. \cite{Ref_centercode11}
+
+%------------------------------------------------------------------------------------------------------------------------
+%\newpage
+\subsection*{Closed Beta Test}
+\label{Kap_Closed_Beta_Test}
+
+Der Closed Beta Test ist nur für einen zuvor ausgewählten Kreis von Testpersonen zugänglich. Diese sollen die Software auf Fehler bzw. Bugs testen und danach einen Prüfbericht anfertigen. Dieser Prüfbericht wird von den Entwicklern verwendet um die Fehler auszumerzen die der ausgewählte Personenkreis entdeckt hat. \cite{Ref_SWT08}
+
+%------------------------------------------------------------------------------------------------------------------------
+\subsection*{Open Beta Test}
+\label{Kap_Open_Beta_Test}
+
+Mit dem Open Beta Test wird die Software für eine breite Masse an Nutzern zugänglich. Damit erzielen die Entwickler ein großes Testumfeld und um auch noch die letzten gravierenden Fehler der Software zu entlarven. Aber ein noch größeres Ziel wird mit dem Open Beta Test verfolgt, denn damit wird das Interesse der Konsumenten geweckt und möglicherweise die Nachfrage des Produktes erhöht. \cite{Ref_SWT08} 
+%------------------------------------------------------------------------------------------------------------------------
+\section*{Fazit}
+%\label{Kap_Fazit}
+
+Meines Erachtens sind diese Tests unerlässlich für ein zuverlässiges Produkt. Denn durch die Vielzahl an Phasen werden pro Phase mehr und mehr Fehler erkannt und behoben. Es fängt an mit gravierenden Fehlern wie abstürzen des Produkts bis hin zu Feinheiten wie Textur Makeln. Das alles ist wichtig damit die Software später stabil läuft und es nicht zu Problemen kommt. Ein anderer wichtiger Punkt ist die Werbung die dadurch erzielt wird, denn durch das Testen der Software wird das Interesse geweckt und die Nachfrage kann dadurch sehr steigen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{thebibliography}{}
+%\addcontentsline{toc}{section}{Literatur}
+\bibitem{geschichte}
+Process.Vogel:\textit{"'Vergangenheit und Zukunft des induktiven Näherungsschalters"'},\\
+\href{http://www.process.vogel.de/automatisierung_prozessleittechnik/articles/145538/}{http://www.process.vogel.de/automatisierung\\\_prozessleittechnik/articles/145538/}, \\Aufrufdatum: 30.09.2015
+
+\bibitem{ifm}
+IFM:\textit{"'Schulungsunterlagen Induktive Sensoren"'}, \href{http://www.seo-analyse.com/seo-lexikon/e/entwicklungsstadium}{http://www.ifm.com/obj/S100d.pdf},\\
+Aufrufdatum: 30.09.2015
+
+\bibitem{Ref_foerder}
+Förderland:\textit{"'Entwicklungsstadien von Software"'},\\
+\href{http://www.foerderland.de/itoffice/it/it-entwicklung/entwicklungsstadien-von-software/}{http://www.foerderland.de/itoffice/it/it-entwicklung/\\entwicklungsstadien-von-software/}, \\
+Aufrufdatum: 01.11.2014
+
+\bibitem{Ref_wikipedia14}
+Wikipedia:\textit{"'Entwicklungsstadium: Beta-Version"'},\\
+\href{http://de.wikipedia.org/wiki/Entwicklungsstadium\_\%28Software\%29}{http://de.wikipedia.org/wiki/\\Entwicklungsstadium\_\%28Software\%29}, \\
+Aufrufdatum: 01.11.2014
+
+\bibitem{Ref_centercode11}
+Centercode:\textit{"'alpha-vs-beta-testing"'}, \href{http://www.centercode.com/blog/2011/01/alpha-vs-beta-testing/}{http://www.\\centercode.com/blog/2011/01/alpha-vs-beta-testing/}, \\
+Aufrufdatum: 01.11.2014
+
+\end{thebibliography}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
