@@ -39,42 +39,82 @@ größtenteils die mechanischen Schalter abgelöst.\cite{geschichte}
 
 Mit Hilfe eines LC-Schwingkreises wird eine elektromagnetisches Wechselfeld mit einer Frequenz zwischen 100kHz und 1MHz erzeugt. Durch den Einsatz eines hoch permeables Ferritmaterial kann dem entstehenden Magnetfeld in der Spule eine Vorzugsrichtung gegeben werden. Mit Hilfe eines Ferritkern kann das Feld auf den zu überwachenden Bereich des Sensors abgestimmt werden.
 
-Wird nun in das Erzeuge und gerichtet Magnetfeld das so genannte "Target" (das zu erkennende Ziel) eingebracht wird nach dem Induktionsgesetz wie bei einem Transformator dem Schwingkreis Energie entzogen. Siehe Abbildung <Ersatzschaltbild mit Transformator>
+Wird nun in das erzeugte und gerichtete Magnetfeld das so genannte »Target« (das zu erkennende Ziel) eingebracht, wird nach dem Induktionsgesetz wie bei einem Transformator dem Schwingkreis Energie entzogen. Siehe Abbildung \ref{fig:ersatz}.
 Dabei kann die Spule des LC-Schwingkreises als Primärwicklung und das "Target" als Sekundärwicklung mit Widerstand als Verbraucher dargestellt werden.
 
-Die nun auftretenden Wirbelstromverluste sind von mehreren Faktoren abhängig.
+\begin{figure}[h]
+	\centering\includegraphics[width=.2\textwidth]{induktiv_sensoren/ersatzschaltbild.png}
+	\caption{Ersatzschaltbild eines \\Targets im Magnetfeld\cite{ifm}}
+	\label{fig:ersatz}
+\end{figure}
 
-- Abstand und der Lage des Gegenstandes vor dem Näherungsschalter 
-- Abmessungen des Gegenstandes und seiner äußeren Form 
-- elektrische Leitfähigkeit und seiner Permeabilität. <quelle pdf doc>
+Die nun auftretenden Wirbelstromverluste sind von mehreren Faktoren abhängig.\cite{ifm}
 
-Das nun entstehende gedämpfte Signal kann mit Hilfe eines Operationsverstärkers ausgewertet werden um ein Binäres Signal zu erzeugen. In der Realität wird das Signal meistens noch weiter ausgewertet um z.b. flattern, wenn sich ein Gegenstand sehr langsam nähert, oder ein fehlerhaftes schalten beim anlegen der Betriebsspannung und während des ein schwingen des LC-Schwingkreises zu verhindern.
+\begin{itemize}
+	\item Abstand und der Lage des Gegenstandes vor dem Näherungsschalter 
+	\item Abmessungen des Gegenstandes und seiner äußeren Form 
+	\item elektrische Leitfähigkeit und seiner Permeabilität.
+\end{itemize}
 
-
-
-\newpage
 \begin{figure}[h]
 	\centering\includegraphics[width=.4\textwidth]{induktiv_sensoren/magnetfeld_sensor.png}
 	\caption{Magnetfeld eines induktiven Sensors\cite{ifm}}
 	\label{fig:magnetfeld}
 \end{figure}
 
+Das nun entstehende gedämpfte Signal kann mit Hilfe eines Operationsverstärkers ausgewertet werden um ein Binäres Signal zu erzeugen. In der Realität wird das Signal meistens noch weiter ausgewertet um z.b. flattern, wenn sich ein Gegenstand sehr langsam nähert, oder ein fehlerhaftes schalten beim anlegen der Betriebsspannung und während des ein schwingen des LC-Schwingkreises zu verhindern. Abbildung \ref{fig:prozesskette} veranschaulicht die Prozesskette des induktiven Sensors als Blockschaltbild. 
+\vspace{.5cm}
+\begin{figure}[h]
+	\centering\includegraphics[width=.45\textwidth]{induktiv_sensoren/prozesskette_sensor}
+	\caption{Prozesskette eines induktiven Sensors\cite{ifm}}
+	\label{fig:prozesskette}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %------------------------------------------------------------------------------------------------------------------------
 \section*{Analog Sensor}
 \label{analogsensor}
-Bei Analogen Sensoren wird das entstehende Signal ausgewertet und z.b. mit Hilfe eines Micocontrollers vorverarbeitet oder als Analogwert im Bereich von 4-20mA zurückgeliefert. Dieses Signal kann z.b. zur Abstandsmessung genutzt werden. Dabei muss allerdings darauf geachtet werden das sich das nähernde Objekt immer auf der selben bahn und Winkel befindet und auch das Material immer das selbe ist da diese Parameter alle in die Wirbelstromverluste einfließen da es sonst zu stark variierenden Messergebnissen kommen kann.
+Bei Analogen Sensoren wird das entstehende Signal ausgewertet und z.\,B. mit Hilfe eines Micocontrollers vorverarbeitet oder als Analogwert im Bereich von 4-20mA zurückgeliefert. Dieses Signal kann z.\,B. zur Abstandsmessung genutzt werden. Dabei muss allerdings darauf geachtet werden das sich das nähernde Objekt immer auf der selben bahn und Winkel befindet und auch das Material immer das selbe ist da diese Parameter alle in die Wirbelstromverluste einfließen da es sonst zu stark variierenden Messergebnissen kommen kann.
 Aufgrund dieser Problematik werden Induktivsensoren eher selten zur Abstandsmessung eingesetzt.
 
-%------------------------------------------------------------------------------------------------------------------------
-\section*{Fazit}
+\section*{Berechnungen}
+
+\begin{align}
+	L=\frac{N^2}{R_m}
+\end{align}
+
+\begin{itemize}
+	\item $L = $ Induktivität
+	\item $R_m = $ Widerstand des magnetischen Kreises
+	\item $N = $ Windungszahl
+\end{itemize}
+
+Der magnetische Widerstand $R_m$ errechnet sich wie folgt:
+\begin{align}
+	R_m =\frac{l}{\mu_0 \cdot \mu_r \cdot A}
+\end{align}
+
+\begin{itemize}
+	\item $\mu_0= $ Feldkonstante $1,257 * 10^{-6}\frac{Vs}{Am}$
+	\item $\mu_r = $ Permeabilitätszahl
+\end{itemize}
+
+\section*{Ausblick}
 %\label{Kap_Fazit}
 
-Meines Erachtens sind diese Tests unerlässlich für ein zuverlässiges Produkt. Denn durch die Vielzahl an Phasen werden pro Phase mehr und mehr Fehler erkannt und behoben. Es fängt an mit gravierenden Fehlern wie abstürzen des Produkts bis hin zu Feinheiten wie Textur Makeln. Das alles ist wichtig damit die Software später stabil läuft und es nicht zu Problemen kommt. Ein anderer wichtiger Punkt ist die Werbung die dadurch erzielt wird, denn durch das Testen der Software wird das Interesse geweckt und die Nachfrage kann dadurch sehr steigen.
+Obwohl es induktive Sensoren eine ganze Weile gibt, ist das Potenzial ihrer Weiterentwicklung noch nicht erreicht. Es besteht ein Trend in Richtung miniaturisierter, leistungsfähiger Sensorik, sowie in die I/O-Link Technik. Dadurch wird die Möglichkeit geschaffen, induktive Sensoren von der Steuerung aus zu parametrieren. Mit dieser Eigenschaft ist es möglich, neue Wege der Diagnosefunktionen zu nutzen. Trotz es noch viel Spielraum für Weiterentwicklungen gibt, dürfen einige Aspekte nicht vernachlässigt werden\cite{trend}:
+
+\begin{itemize}
+	\item Temperaturabhängigkeit
+	\item Performance
+	\item Schaltabstand
+	\item Schaltfrequenz
+	\item Kosten
+\end{itemize}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+
 \begin{thebibliography}{}
 %\addcontentsline{toc}{section}{Literatur}
 \bibitem{geschichte}
@@ -85,19 +125,9 @@ Process.Vogel:\textit{"'Vergangenheit und Zukunft des induktiven Näherungsschalt
 IFM:\textit{"'Schulungsunterlagen Induktive Sensoren"'}, \href{http://www.seo-analyse.com/seo-lexikon/e/entwicklungsstadium}{http://www.ifm.com/obj/S100d.pdf},\\
 Aufrufdatum: 30.09.2015
 
-\bibitem{Ref_foerder}
-Förderland:\textit{"'Entwicklungsstadien von Software"'},\\
-\href{http://www.foerderland.de/itoffice/it/it-entwicklung/entwicklungsstadien-von-software/}{http://www.foerderland.de/itoffice/it/it-entwicklung/\\entwicklungsstadien-von-software/}, \\
-Aufrufdatum: 01.11.2014
-
-\bibitem{Ref_wikipedia14}
-Wikipedia:\textit{"'Entwicklungsstadium: Beta-Version"'},\\
-\href{http://de.wikipedia.org/wiki/Entwicklungsstadium\_\%28Software\%29}{http://de.wikipedia.org/wiki/\\Entwicklungsstadium\_\%28Software\%29}, \\
-Aufrufdatum: 01.11.2014
-
-\bibitem{Ref_centercode11}
-Centercode:\textit{"'alpha-vs-beta-testing"'}, \href{http://www.centercode.com/blog/2011/01/alpha-vs-beta-testing/}{http://www.\\centercode.com/blog/2011/01/alpha-vs-beta-testing/}, \\
-Aufrufdatum: 01.11.2014
-
+\bibitem{trend}
+A\&D24: \textit{"'Unterschätzt: INDUKTIVE SENSOREN"'},\\
+\href{http://www.aud24.net/pi/index.php?StoryID=189\&articleID=188851}{http://www.aud24.net/pi/index.php?StoryID=189\\\&articleID=188851},\\
+Aufrufdatum: 07.08.2015
 \end{thebibliography}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
