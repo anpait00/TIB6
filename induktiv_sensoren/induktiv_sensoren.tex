@@ -37,9 +37,9 @@ größtenteils die mechanischen Schalter abgelöst.\cite{geschichte}
 \section*{Funktionsweise}
 \label{funktionsweise}
 
-Mit Hilfe eines LC-Schwingkreises wird eine elektromagnetisches Wechselfeld mit einer Frequenz zwischen 100kHz und 1MHz erzeugt. Durch den Einsatz eines hoch permeables Ferritmaterial kann dem entstehenden Magnetfeld in der Spule eine Vorzugsrichtung gegeben werden. Mit Hilfe eines Ferritkern kann das Feld auf den zu überwachenden Bereich des Sensors abgestimmt werden.
+Mit Hilfe eines LC-Schwingkreises wird ein elektromagnetisches Wechselfeld mit einer Frequenz zwischen 100 $kHz$ und 1 $MHz$ erzeugt. Durch den Einsatz eines hoch permeablen Ferritmaterials kann dem entstehenden Magnetfeld in der Spule eine Vorzugsrichtung gegeben werden. Mit Hilfe eines Ferritkern kann das Feld auf den zu überwachenden Bereich des Sensors abgestimmt werden.
 
-Wird nun in das erzeugte und gerichtete Magnetfeld das so genannte »Target« (das zu erkennende Ziel) eingebracht, wird nach dem Induktionsgesetz wie bei einem Transformator dem Schwingkreis Energie entzogen. Siehe Abbildung \ref{fig:ersatz}.
+Wird nun in das erzeugte und gerichtete Magnetfeld das so genannte »Target« (das zu erkennende Ziel) eingebracht, wird nach dem Induktionsgesetz, wie bei einem Transformator, dem Schwingkreis Energie entzogen. Siehe Abbildung \ref{fig:ersatz}.
 Dabei kann die Spule des LC-Schwingkreises als Primärwicklung und das "Target" als Sekundärwicklung mit Widerstand als Verbraucher dargestellt werden.
 
 \begin{figure}[h]
@@ -51,7 +51,7 @@ Dabei kann die Spule des LC-Schwingkreises als Primärwicklung und das "Target" a
 Die nun auftretenden Wirbelstromverluste sind von mehreren Faktoren abhängig.\cite{ifm}
 
 \begin{itemize}
-	\item Abstand und der Lage des Gegenstandes vor dem Näherungsschalter 
+	\item Abstand und Lage des Gegenstandes vor dem Näherungsschalter 
 	\item Abmessungen des Gegenstandes und seiner äußeren Form 
 	\item elektrische Leitfähigkeit und seiner Permeabilität.
 \end{itemize}
@@ -62,7 +62,7 @@ Die nun auftretenden Wirbelstromverluste sind von mehreren Faktoren abhängig.\ci
 	\label{fig:magnetfeld}
 \end{figure}
 
-Das nun entstehende gedämpfte Signal kann mit Hilfe eines Operationsverstärkers ausgewertet werden um ein Binäres Signal zu erzeugen. In der Realität wird das Signal meistens noch weiter ausgewertet um z.b. flattern, wenn sich ein Gegenstand sehr langsam nähert, oder ein fehlerhaftes schalten beim anlegen der Betriebsspannung und während des ein schwingen des LC-Schwingkreises zu verhindern. Abbildung \ref{fig:prozesskette} veranschaulicht die Prozesskette des induktiven Sensors als Blockschaltbild. 
+Das nun entstehende gedämpfte Signal kann mit Hilfe eines Operationsverstärkers ausgewertet werden, um ein binäres Signal zu erzeugen. In der Realität wird das Signal meistens noch weiter ausgewertet, um z.\,B. Flattern, wenn sich ein Gegenstand sehr langsam nähert, oder ein fehlerhaftes Schalten beim Anlegen der Betriebsspannung und während des Einschwingen des LC-Schwingkreises, zu verhindern. Abbildung \ref{fig:prozesskette} veranschaulicht die Prozesskette des induktiven Sensors als Blockschaltbild. 
 \vspace{.5cm}
 \begin{figure}[h]
 	\centering\includegraphics[width=.45\textwidth]{induktiv_sensoren/prozesskette_sensor}
@@ -74,7 +74,7 @@ Das nun entstehende gedämpfte Signal kann mit Hilfe eines Operationsverstärkers 
 %------------------------------------------------------------------------------------------------------------------------
 \section*{Analog Sensor}
 \label{analogsensor}
-Bei Analogen Sensoren wird das entstehende Signal ausgewertet und z.\,B. mit Hilfe eines Micocontrollers vorverarbeitet oder als Analogwert im Bereich von 4-20mA zurückgeliefert. Dieses Signal kann z.\,B. zur Abstandsmessung genutzt werden. Dabei muss allerdings darauf geachtet werden das sich das nähernde Objekt immer auf der selben bahn und Winkel befindet und auch das Material immer das selbe ist da diese Parameter alle in die Wirbelstromverluste einfließen da es sonst zu stark variierenden Messergebnissen kommen kann.
+Bei analogen Sensoren wird das entstehende Signal ausgewertet und z.\,B. mit Hilfe eines Microcontrollers vorverarbeitet oder als Analogwert im Bereich von 4-20 $mA$ zurückgeliefert. Dieses Signal kann z.\,B. zur Abstandsmessung genutzt werden. Dabei muss allerdings darauf geachtet werden, dass sich das nähernde Objekt immer auf der selben Bahn und Winkel befindet und auch das Material immer dasselbe ist, da diese Parameter alle in die Wirbelstromverluste einfließen, was zu stark variierenden Messergebnissen führen kann.
 Aufgrund dieser Problematik werden Induktivsensoren eher selten zur Abstandsmessung eingesetzt.
 
 \section*{Berechnungen}
@@ -102,7 +102,7 @@ Der magnetische Widerstand $R_m$ errechnet sich wie folgt:
 \section*{Ausblick}
 %\label{Kap_Fazit}
 
-Obwohl es induktive Sensoren eine ganze Weile gibt, ist das Potenzial ihrer Weiterentwicklung noch nicht erreicht. Es besteht ein Trend in Richtung miniaturisierter, leistungsfähiger Sensorik, sowie in die I/O-Link Technik. Dadurch wird die Möglichkeit geschaffen, induktive Sensoren von der Steuerung aus zu parametrieren. Mit dieser Eigenschaft ist es möglich, neue Wege der Diagnosefunktionen zu nutzen. Trotz es noch viel Spielraum für Weiterentwicklungen gibt, dürfen einige Aspekte nicht vernachlässigt werden\cite{trend}:
+Obwohl es induktive Sensoren eine ganze Weile gibt, ist das Potenzial ihrer Weiterentwicklung noch nicht erreicht. Es besteht ein Trend in Richtung miniaturisierter, leistungsfähiger Sensorik, sowie in die I/O-Link Technik. Dadurch wird die Möglichkeit geschaffen, induktive Sensoren von der Steuerung aus zu parametrieren. Mit dieser Eigenschaft ist es möglich, neue Wege der Diagnosefunktionen zu nutzen. Obwohl es noch viel Spielraum für Weiterentwicklungen gibt, dürfen einige Aspekte nicht vernachlässigt werden\cite{trend}:
 
 \begin{itemize}
 	\item Temperaturabhängigkeit
